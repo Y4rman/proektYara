@@ -8,5 +8,6 @@ namespace я_придумываю_игру
 {
     internal class лампочка
     {
+
     }
 }
