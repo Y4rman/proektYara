@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+using Field1;
+
+namespace GameNuel
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Field field = new Field();
+        }
+    }
+}
