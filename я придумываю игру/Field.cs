@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace Field1
 {
     public class Field
     {
-        private int[,] rooms = { { 0, 0, 0, -1, 0 }, { 0, 0, 0, 0, 0 } };
+        private byte[,] rooms = { { 0, 0, 0, -1, 0 }, { 0, 0, 0, 0, 0 } };
         /* 
          0 1 2 3 4 
 
@@ -28,12 +28,12 @@ namespace Field1
         // лопается лампочка, через 7 секунд получает список лампочек, которые можно лопнуть, затем лопает по этому списку.
         public void burnOut()
         {
-            int[] canBurn;
+            byte[] canBurn;
             // List<int> canBurn = new List<int>();
-            for (int i = 0; i < rooms.Length; i++)
+            for (byte i = 0; i < rooms.Length; i++)
             {
                 if (rooms[i].Contains(1)) {
-                    for (int j = 0; j < rooms.Length; i++)
+                    for (byte j = 0; j < rooms.Length; i++)
                     {
                         if (rooms[i, j] == 1) {
                             canBurn.AddRange({ i, j });
